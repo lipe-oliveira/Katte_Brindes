@@ -26,4 +26,12 @@ router.get('/get_produtos', async (req, res)=>{
     }
 });
 
+router.get('/get_produtos:id', async (req, res)=>{
+    try{
+        return res.send(await Produtos.findById(req.params.id));
+    }
+    catch(err){
+
+    }
+});
 module.exports = (app) => app.use('/server', router);
