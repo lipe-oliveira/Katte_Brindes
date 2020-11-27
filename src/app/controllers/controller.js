@@ -38,12 +38,28 @@ router.get('/get_produtos', async (req, res)=>{
     try{
         const {page = 1} = req.query;
 
-        return res.send(await Produtos.findOne({}).paginate({}, {page, limit:10}));
+        return res.send(await Produtos.paginate({}, {page, limit:10}));
     }
     catch(err){
 
     }
 });
+
+router.get('/post_get_produtos_imgs', async (req, res)=>{
+    try{
+        const {id} = req.query;
+        produto = Produtos.findById(id);
+
+        const { imgs } = produto;
+
+        return res.send(imgs);
+
+    }
+    catch(err){
+
+    }
+});
+
 
 router.get('/get_produtos/:id', async (req, res)=>{
     try{
