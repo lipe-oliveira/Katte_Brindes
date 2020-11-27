@@ -15,6 +15,25 @@ router.post('/post_produto', async(req, res) => {
     }
 });
 
+router.post('/post_produto_img', async(req, res) => {
+    try{
+        const{id, img} = req.body;
+
+        const produto = await Produtos.findById(id);
+
+        pusher = {
+            imagem:img
+        }
+        await produto.imgs.push(pusher)
+        await produto.save()
+
+        return res.send(produto);
+    }
+    catch(err){
+        console.log(err);
+    }
+});
+
 router.get('/get_produtos', async (req, res)=>{
     try{
         const {page = 1} = req.query;
