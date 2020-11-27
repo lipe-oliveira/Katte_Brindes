@@ -48,7 +48,7 @@ router.get('/get_produtos', async (req, res)=>{
 router.get('/post_get_produtos_imgs', async (req, res)=>{
     try{
         const {id} = req.body;
-        produto = Produtos.findById(id);
+        produto = await Produtos.findById(id);
 
         const { imgs } = produto;
 
