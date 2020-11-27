@@ -50,7 +50,9 @@ router.get('/post_get_produtos_imgs', async (req, res)=>{
         const {id} = req.body;
         produto = await Produtos.findById(id);
 
-        const { imgs } = produto;
+        const { imgs } = produto.imgs;
+
+        console.log( imgs )
 
         return res.send(imgs);
 
