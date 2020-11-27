@@ -38,7 +38,7 @@ router.get('/get_produtos', async (req, res)=>{
     try{
         const {page = 1} = req.query;
 
-        return res.send(await Produtos.paginate({}, {page, limit:10}));
+        return res.send(await Produtos.populate('imgs').paginate({}, {page, limit:10}).);
     }
     catch(err){
 
