@@ -72,4 +72,16 @@ router.get('/get_produtos/:id', async (req, res)=>{
 
     }
 });
+
+router.post('/delete', async (req, res)=>{
+    try{
+        const { _id } = req.body
+        await Produtos.findByIdAndRemove({_id})
+        return res.send(await Produtos.findById({_id}));
+    }
+    catch(err){
+
+    }
+});
+
 module.exports = (app) => app.use('/server', router);
