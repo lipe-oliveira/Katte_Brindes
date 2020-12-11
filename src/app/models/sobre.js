@@ -26,7 +26,7 @@ const schema = new mongoose.Schema({
     img:{
         type: String,
         required:false
-    }
+    },
 
     createdAt:{
         type: Date,
