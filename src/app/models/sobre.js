@@ -4,15 +4,15 @@ const mongoose_paginate = require('mongoose-paginate');
 const schema = new mongoose.Schema({
     desc:{
         type: String,
-        required: true
+        required: false
     },
     objetivos:{
         type:String,
-        required:true
+        required:false
     },
     funcionamento: {
         type: String,
-        required:true
+        required:false
     },
     imgs:[
         {

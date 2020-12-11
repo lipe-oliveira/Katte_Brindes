@@ -9,4 +9,10 @@ router.get('/get_logo', async(req, res) => {
     )
 });
 
+router.post('/post_logo', async(req, res) => {
+    const sobre = await Sobre.create(req.body);
+    return( 
+        res.send(sobre)
+    )
+});
 module.exports = (app) => app.use('/server', router);
