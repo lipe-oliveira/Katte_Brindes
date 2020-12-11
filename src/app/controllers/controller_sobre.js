@@ -7,6 +7,6 @@ router.get('/get_logo', async(req, res) => {
     return( 
         res.send(img)
     )
-})
+});
 
 module.exports = (app) => app.use('/server', router);
