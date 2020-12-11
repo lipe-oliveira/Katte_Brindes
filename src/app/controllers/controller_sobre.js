@@ -3,9 +3,9 @@ const router = express.Router();
 const Sobre = require('../models/sobre')
 
 router.get('/get_logo', async(req, res) => {
-    const {img} = await Sobre.findOne({});
+    const spbre= await Sobre.findOne({});
     return( 
-        res.send(img)
+        res.send(sobre)
     )
 });
 
