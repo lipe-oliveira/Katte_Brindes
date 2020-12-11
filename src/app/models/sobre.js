@@ -18,9 +18,16 @@ const schema = new mongoose.Schema({
         {
         imagem:{
             type: String,
-            setMaxListeners: 100000000000000000000000000000000000000000000000        }
+            setMaxListeners: 100000000000000000000000000000000000000000000000        
+        }
     }
-],
+    ],
+
+    img:{
+        type: String,
+        required:false
+    }
+
     createdAt:{
         type: Date,
         default: Date.now
