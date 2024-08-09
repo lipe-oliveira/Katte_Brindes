@@ -5,6 +5,14 @@ npm init -y (creates package json)
 npm install expres
 npm install cors
 
+git config --global user.name "Felipe Belchior"
+git config --global user.email felipeoliveira.b@gmail.com
+git init
+git add . or git clone https://github.com/libgit2/libgit2 #exemplo
+git commit -m 'versão' 
+git status
+git add README
+
 BIBLIOTECAS: 
 *yarn add mongoose
 *yarn add express
