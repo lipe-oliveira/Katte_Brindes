@@ -1,3 +1,10 @@
+fnm env --use-on-cd | Out-String | Invoke-Expression
+fnm use --install-if-missing 20
+
+npm init -y (creates package json)
+npm install expres
+npm install cors
+
 BIBLIOTECAS: 
 *yarn add mongoose
 *yarn add express

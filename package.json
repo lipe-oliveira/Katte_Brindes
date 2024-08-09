@@ -1,5 +1,5 @@
 {
-  "name": "tia",
+  "name": "artic",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongodb": "^3.6.3",
-    "mongoose": "^5.10.16",
+    "mongoose": "^5.13.22",
     "mongoose-paginate": "^5.0.3",
     "nodemon": "^2.0.6",
     "paginate": "^0.2.0"
@@ -20,5 +20,8 @@
     "g1": "git add .",
     "g2": "git commit -m auto",
     "g3": "git push"
-  }
+  },
+  "description": "",
+  "keywords": [],
+  "author": ""
 }
